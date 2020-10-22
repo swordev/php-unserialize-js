@@ -35,7 +35,7 @@ function readBoolean(array: LiteralArray) {
 		throw new Error(
 			`Parse error: "${booleanString}" is not a boolean number.`
 		)
-	const boolean = !!booleanString
+	const boolean = !!+booleanString
 	return boolean
 }
 

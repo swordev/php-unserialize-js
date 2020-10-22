@@ -12,9 +12,12 @@ describe("single type cases test", () => {
 		expect(result).toMatchObject(expected)
 	})
 	it("boolean", () => {
-		const expected = { key: true }
-		const result = unserialize("key|b:1;")
-		expect(result).toMatchObject(expected)
+		const expected_true = { key: true }
+		const result_true = unserialize("key|b:1;")
+		expect(result_true).toMatchObject(expected_true)
+		const expected_false = { key: false }
+		const result_false = unserialize("key|b:0;")
+		expect(result_false).toMatchObject(expected_false)
 	})
 	it("null", () => {
 		const expected = { key: null }
