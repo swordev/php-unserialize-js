@@ -1,0 +1,58 @@
+{
+  "name": "@swordev/php-unserialize",
+  "version": "1.0.0",
+  "description": "PHP unserialize function",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/index.d.ts"
+  ],
+  "scripts": {
+    "build": "rimraf lib/* && tsc -p ./src/tsconfig.json",
+    "dev": "tsc -p ./src/tsconfig.json -w",
+    "test": "jest",
+    "cover": "jest --coverage",
+    "lint": "eslint . --ext .ts,.js,.json",
+    "lint:fix": "eslint . --ext .ts,.js,.json --fix",
+    "prepare": "npm run build && npm run lint && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swordev/php-unserialize.git"
+  },
+  "keywords": [
+    "php",
+    "unserialize",
+    "session"
+  ],
+  "author": {
+    "name": "Juanra Galvez",
+    "email": "juanrgm724@gmail.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/swordev/php-unserialize/blob/main/LICENSE.md"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/swordev/php-unserialize/issues"
+  },
+  "homepage": "https://github.com/swordev/php-unserialize#readme",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.14.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.6.0",
+    "prettier": "2.1.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.4.1",
+    "typescript": "^4.0.3"
+  }
+}
