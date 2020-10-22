@@ -25,23 +25,20 @@
     "unserialize",
     "session"
   ],
-  "author": {
-    "name": "Juanra Galvez",
-    "email": "juanrgm724@gmail.com"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/swordev/php-unserialize-js/blob/master/README.md"
-    }
-  ],
+  "author": "Juanra Galvez <juanrgm724@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/swordev/php-unserialize-js/issues"
   },
   "homepage": "https://github.com/swordev/php-unserialize-js#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "engines": {
     "node": ">=4.0.0"
   },
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^26.0.15",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
