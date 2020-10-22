@@ -31,7 +31,7 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 ## Forked project
 
-This project was forked from [node-php-session-unserialize](https://github.com/ALiangLiang/node-php-session-unserialize) because it had bugs and it was not being maintained.
+This project was forked from [node-php-session-unserialize](https://github.com/ALiangLiang/node-php-session-unserialize) because it had bugs ([ed06e76](https://github.com/swordev/php-unserialize-js/commit/ed06e76b74eec9ee1ea935269a5934d86705f8ca), [7fa1b48](https://github.com/swordev/php-unserialize-js/commit/7fa1b48a0723063a0b2d414b7f035a7ee1465a65)) and it was not being maintained.
 
 ## License
 
