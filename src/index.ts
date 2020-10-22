@@ -4,12 +4,14 @@ type LiteralArray = Array<string> & {
 
 function readUntil(array: LiteralArray, keywords: string) {
 	let value = ""
-	while (array.length && keywords.indexOf(array[0]) === -1) {
-		value += array.shift()
+	while (
+		array.offset < array.length &&
+		keywords.indexOf(array[array.offset]) === -1
+	) {
+		value += array[array.offset]
 		array.offset += 1
 	}
-	array.shift()
-	array.offset += 1
+	if (array.offset < array.length) array.offset += 1
 	return value
 }
 
@@ -140,9 +142,10 @@ export function unserialize(text: string): any {
 		try {
 			Object.assign(result, read(array))
 		} catch (err) {
-			err.message += ', Left text: "' + array.join("") + '"'
+			err.message +=
+				', Left text: "' + array.slice(array.offset).join("") + '"'
 			throw err
 		}
-	} while (array.length)
+	} while (array.offset < array.length)
 	return result
 }
